@@ -1,5 +1,5 @@
 CONGRESO
-Página de enlaces: [Enlaces del congreso](enlaces.html), con Agenda, Culto Apertura, Portal del Congreso, CV Ministerial Conferencista, Video Promocional, Quienes Somos, Alabanza Lema y Fotos. Las opciones sin contenido se muestran como «Próximamente».
+Página de enlaces: [Enlaces del congreso](enlaces.html), con Agenda, Culto Apertura, Portal del Congreso, CV Ministerial Conferencista, Video Promocional, Quienes Somos, Alabanza Lema, Fotos y [Preguntas en Slido](https://app.sli.do/event/9c7j2EGnZSvQSKkC7SzppT). Las opciones sin contenido se muestran como «Próximamente».
 
 Agenda completa: [Programa de los dos días](agenda.html). Su contenido está incorporado en HTML a partir de [agenda_contenido.json](raw/agenda_contenido.json) para permitir también la consulta local sin servidor ni JavaScript. Al cambiar los horarios, actualizar la agenda, el resumen de la página principal y el calendario de `script.js`.
 
