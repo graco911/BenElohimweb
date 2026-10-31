@@ -1,4 +1,12 @@
 CONGRESO
+Página de enlaces: [Enlaces del congreso](enlaces.html), con Agenda, Culto Apertura, Portal del Congreso, CV Ministerial Conferencista, Video Promocional, Quienes Somos, Alabanza Lema y Fotos. Las opciones sin contenido se muestran como «Próximamente».
+
+Agenda completa: [Programa de los dos días](agenda.html). Su contenido está incorporado en HTML a partir de [agenda_contenido.json](raw/agenda_contenido.json) para permitir también la consulta local sin servidor ni JavaScript. Al cambiar los horarios, actualizar la agenda, el resumen de la página principal y el calendario de `script.js`.
+
+Conferencista: [CV ministerial de Samuel Hernández Clemente](cv-ministerial.html), con biografía, trayectoria, formación, libros y proyectos. Accesible desde la página de enlaces y la sección del conferencista en el portal.
+
+Alabanza lema: [¿Él Es Digno?](alabanza-lema.html), de Adoración La IBI, con portada, apartado de letra, créditos y enlace a Spotify, sin reproductor incrustado. La portada de Spotify requiere conexión a Internet.
+
 Para líderes, ancianos, diáconos, maestros, jóvenes y público en general
 “AL PENSAR EN EL FIN”
 Respuestas bíblicas a preguntas sobre la muerte, el sepulcro y la eternidad

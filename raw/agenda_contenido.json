@@ -1,0 +1,111 @@
+{
+    "agenda": [
+        {
+            "dia": "Viernes",
+            "fecha": "13-NOV-26",
+            "actividades": [
+                {
+                    "actividad": "Inscripción",
+                    "inicio": "02:00 p.m.",
+                    "termino": "03:00 p.m."
+                },
+                {
+                    "actividad": "Devocional Apertura",
+                    "inicio": "03:00 p.m.",
+                    "termino": "04:00 p.m."
+                },
+                {
+                    "actividad": "1er Conferencia",
+                    "inicio": "04:00 p.m.",
+                    "termino": "04:50 p.m."
+                },
+                {
+                    "actividad": "Sesión de Preguntas",
+                    "inicio": "04:50 p.m.",
+                    "termino": "05:20 p.m."
+                },
+                {
+                    "actividad": "Break",
+                    "inicio": "05:20 p.m.",
+                    "termino": "05:40 p.m."
+                },
+                {
+                    "actividad": "2da Conferencia",
+                    "inicio": "05:40 p.m.",
+                    "termino": "06:30 p.m."
+                },
+                {
+                    "actividad": "Sesión de Preguntas",
+                    "inicio": "06:30 p.m.",
+                    "termino": "06:50 p.m."
+                },
+                {
+                    "actividad": "3ra Conferencia",
+                    "inicio": "06:50 p.m.",
+                    "termino": "07:40 p.m."
+                },
+                {
+                    "actividad": "Cena",
+                    "inicio": "07:40 p.m.",
+                    "termino": null
+                }
+            ]
+        },
+        {
+            "dia": "Sábado",
+            "fecha": "14-NOV-26",
+            "actividades": [
+                {
+                    "actividad": "Dev y canto Lema",
+                    "inicio": "08:30 a.m.",
+                    "termino": "09:00 a.m."
+                },
+                {
+                    "actividad": "4ta Conferencia",
+                    "inicio": "09:00 a.m.",
+                    "termino": "09:50 a.m."
+                },
+                {
+                    "actividad": "Sesión de Preguntas",
+                    "inicio": "09:50 a.m.",
+                    "termino": "10:20 a.m."
+                },
+                {
+                    "actividad": "5ta Conferencia",
+                    "inicio": "10:20 a.m.",
+                    "termino": "11:10 a.m."
+                },
+                {
+                    "actividad": "Sesión de Preguntas",
+                    "inicio": "11:10 a.m.",
+                    "termino": "11:30 a.m."
+                },
+                {
+                    "actividad": "Receso",
+                    "inicio": "11:30 a.m.",
+                    "termino": "11:50 a.m."
+                },
+                {
+                    "actividad": "6ta Conferencia",
+                    "inicio": "11:50 a.m.",
+                    "termino": "12:40 p.m."
+                },
+                {
+                    "actividad": "Sesión de Preguntas",
+                    "inicio": "12:40 p.m.",
+                    "termino": "01:00 p.m."
+                },
+                {
+                    "actividad": "7ma Conferencia",
+                    "inicio": "01:00 p.m.",
+                    "termino": "01:50 p.m."
+                },
+                {
+                    "actividad": "Comida",
+                    "inicio": "01:50 p.m.",
+                    "termino": null
+                }
+            ]
+        }
+    ]
+}
