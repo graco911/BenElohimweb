@@ -138,8 +138,8 @@ summary:hover h3 { color: var(--cerulean); }
 .countdown-label { color: var(--gold); font-size: 9px; font-weight: 600; letter-spacing: 1.5px; line-height: 1.6; margin-bottom: 12px; }
 .countdown-units { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 430px; border-block: 1px solid #ffffff40; }
 .countdown-units > div { display: grid; gap: 5px; padding: 13px 10px 12px 0; }
-.countdown-units strong { font: 400 30px/1 Georgia, "Times New Roman", serif; font-variant-numeric: tabular-nums; color: var(--paper); }
-.countdown-units span { color: #ffffffb3; font-size: 7px; letter-spacing: 1px; }
+.countdown-units strong { font: 800 44px/1 Georgia, "Times New Roman", serif; font-variant-numeric: tabular-nums; color: var(--paper); }
+.countdown-units span { color: #ffffffb3; font-size: 9px; letter-spacing: 1.1px; font-weight: 800; }
 .countdown-message { color: var(--gold); font-size: 13px; line-height: 1.6; margin: 0; }
 .countdown-message:empty { display: none; }
 .countdown-section { padding: 26px 20px; background: var(--space); color: var(--paper); }
@@ -147,7 +147,8 @@ summary:hover h3 { color: var(--cerulean); }
 .countdown-section .countdown-label { text-align: center; }
 .countdown-section .countdown-units { max-width: none; }
 .countdown-section .countdown-units > div { justify-items: center; padding-inline: 6px; }
-.countdown-section .countdown-units strong { font: 400 40px/1 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+.countdown-section .countdown-units strong { font: 900 60px/1 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+.countdown-section .countdown-units span { font-size: 10px; letter-spacing: 1.3px; font-weight: 900; }
 .countdown-section .countdown-message { margin-top: 12px; text-align: center; }
 .calendar-status { font-size: 11px; color: var(--paper); margin: 12px 0 0; min-height: 15px; }
 .date-card { text-align: center; padding: 40px 25px 28px; border: 1px solid var(--gold); background: var(--green); }

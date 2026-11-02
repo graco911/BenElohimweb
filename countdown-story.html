@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Story</title>
+  <style>
+    :root {
+      --space: #1b2a4a;
+      --space-2: #0d1a2d;
+      --paper: #f8f5ee;
+      --gold: #e5b824;
+      --gold-soft: #f9d76c;
+      --fire: #e3422a;
+      --muted: rgba(255,255,255,0.72);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--space);
+      color: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 80% 15%, rgba(229,184,36,0.18), transparent 18%),
+        radial-gradient(circle at 10% 85%, rgba(91,155,213,0.28), transparent 30%),
+        linear-gradient(160deg, var(--space-2), var(--space) 45%, #162b47 100%);
+    }
+
+    .story {
+      position: relative;
+      width: min(100vw, 1080px);
+      height: min(100vh, 1920px);
+      padding: 64px 72px 52px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.05));
+    }
+
+    .story::before {
+      content: "";
+      position: absolute;
+      inset: 36px 40px auto auto;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(229,184,36,0.5);
+      border-radius: 50%;
+      box-shadow: 0 0 0 52px rgba(229,184,36,0.04), 0 0 0 110px rgba(229,184,36,0.02);
+      pointer-events: none;
+    }
+
+    .story::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -220px -140px;
+      width: 600px;
+      height: 600px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+    }
+
+    .story-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+    .header-art {
+      display: block;
+      width: min(560px, 85vw);
+      height: auto;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+      padding: 32px 0;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--gold-soft);
+      font-size: 24px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .title {
+      margin: 0;
+      font-size: clamp(56px, 8vw, 135px);
+      line-height: 0.96;
+      letter-spacing: -5px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .title .accent {
+      color: var(--gold-soft);
+      font-style: normal;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(22px, 2vw, 36px);
+      line-height: 1.5;
+      letter-spacing: 1px;
+    }
+
+    .countdown-wrap {
+      margin: 14px auto 0;
+      width: min(100%, 780px);
+      border-top: 1px solid rgba(255,255,255,0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      padding: 24px 0 8px;
+    }
+
+    .countdown-units {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .countdown-unit {
+      display: grid;
+      gap: 10px;
+      justify-items: center;
+      padding: 18px 10px 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .countdown-unit strong {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: clamp(68px, 7vw, 150px);
+      line-height: 0.9;
+      letter-spacing: -3px;
+      font-weight: 900;
+      color: var(--paper);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .countdown-unit span {
+      display: block;
+      font-size: clamp(14px, 1.4vw, 22px);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+
+    .message {
+      margin: 20px 0 0;
+      color: var(--gold-soft);
+      font-size: clamp(18px, 2vw, 26px);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .date-box {
+      display: grid;
+      gap: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .date-box strong {
+      font-size: clamp(20px, 2.4vw, 30px);
+      letter-spacing: 2px;
+      color: var(--gold-soft);
+    }
+
+    .date-box span {
+      color: var(--muted);
+      font-size: clamp(16px, 1.8vw, 22px);
+      letter-spacing: 2px;
+    }
+
+    .cta {
+      padding: 18px 32px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--space);
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: clamp(15px, 1.6vw, 22px);
+      box-shadow: 0 18px 30px rgba(229,184,36,0.25);
+    }
+
+    @media (max-width: 720px) {
+      .story {
+        padding: 36px 24px 28px;
+      }
+
+      .topline {
+        gap: 12px;
+        font-size: 11px;
+        letter-spacing: 1.4px;
+      }
+
+      .header-art {
+        width: min(420px, 82vw);
+      }
+
+      .eyebrow {
+        letter-spacing: 3px;
+        font-size: 16px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .countdown-units {
+        gap: 8px;
+      }
+
+      .countdown-unit {
+        padding-top: 12px;
+      }
+
+      .countdown-unit strong {
+        font-size: clamp(34px, 10vw, 72px);
+        letter-spacing: -1px;
+      }
+
+      .countdown-unit span {
+        letter-spacing: 2px;
+        font-size: 10px;
+      }
+
+      .bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="story" aria-label="Cuenta regresiva del congreso">
+    <div class="story-inner">
+      <header class="topline">
+        <img class="header-art" src="img/header_img.png" alt="Al pensar en el fin">
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">Cuenta regresiva</p>
+        <h1 class="title">Falta<br><span class="accent">muy poco.</span></h1>
+        <p class="subtitle">13 y 14 de noviembre • Comalcalco, Tabasco</p>
+
+        <div class="countdown-wrap">
+          <div class="countdown-units" id="story-countdown" data-target="2026-11-13T14:00:00-06:00">
+            <div class="countdown-unit">
+              <strong data-countdown-days>00</strong>
+              <span>DÍAS</span>
+            </div>
+            <div class="countdown-unit">
+              <strong data-countdown-hours>00</strong>
+              <span>HORAS</span>
+            </div>
+            <div class="countdown-unit">
+              <strong data-countdown-minutes>00</strong>
+              <span>MINUTOS</span>
+            </div>
+            <div class="countdown-unit">
+              <strong data-countdown-seconds>00</strong>
+              <span>SEGUNDOS</span>
+            </div>
+          </div>
+          <p class="message" id="countdown-message">¡No te lo pierdas!</p>
+        </div>
+      </section>
+
+      <footer class="bottom">
+        <div class="date-box">
+          <strong>13 / 14 NOV</strong>
+          <span>INICIO: 2:00 PM</span>
+        </div>
+        <div class="cta">Reservá la fecha</div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    const countdown = document.querySelector('#story-countdown');
+    const countdownTarget = new Date(countdown.dataset.target).getTime();
+    const countdownUnits = {
+      days: countdown.querySelector('[data-countdown-days]'),
+      hours: countdown.querySelector('[data-countdown-hours]'),
+      minutes: countdown.querySelector('[data-countdown-minutes]'),
+      seconds: countdown.querySelector('[data-countdown-seconds]')
+    };
+    const countdownMessage = document.querySelector('#countdown-message');
+
+    function updateCountdown() {
+      const remaining = countdownTarget - Date.now();
+
+      if (remaining <= 0) {
+        document.querySelector('.title').innerHTML = '¡Ya<br><span class="accent">comenzó!</span>';
+        countdownMessage.textContent = 'Te esperamos en el congreso';
+        Object.values(countdownUnits).forEach((unit) => unit.textContent = '00');
+        return;
+      }
+
+      const days = Math.floor(remaining / 86400000);
+      const hours = Math.floor((remaining % 86400000) / 3600000);
+      const minutes = Math.floor((remaining % 3600000) / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+
+      countdownUnits.days.textContent = String(days).padStart(2, '0');
+      countdownUnits.hours.textContent = String(hours).padStart(2, '0');
+      countdownUnits.minutes.textContent = String(minutes).padStart(2, '0');
+      countdownUnits.seconds.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
