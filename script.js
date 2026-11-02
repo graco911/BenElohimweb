@@ -2,6 +2,43 @@
 
 document.documentElement.classList.add("js");
 
+const countdown = document.querySelector("#countdown");
+const countdownTarget = new Date(countdown.dataset.target).getTime();
+const countdownUnits = {
+  days: countdown.querySelector("[data-countdown-days]"),
+  hours: countdown.querySelector("[data-countdown-hours]"),
+  minutes: countdown.querySelector("[data-countdown-minutes]"),
+  seconds: countdown.querySelector("[data-countdown-seconds]")
+};
+const countdownMessage = countdown.querySelector("#countdown-message");
+
+function updateCountdown() {
+  const remaining = countdownTarget - Date.now();
+  if (remaining <= 0) {
+    countdown.querySelector(".countdown-units").hidden = true;
+    countdownMessage.textContent = "¡El congreso ha comenzado!";
+    return false;
+  }
+
+  const days = Math.floor(remaining / 86400000);
+  const hours = Math.floor((remaining % 86400000) / 3600000);
+  const minutes = Math.floor((remaining % 3600000) / 60000);
+  const seconds = Math.floor((remaining % 60000) / 1000);
+  countdownUnits.days.textContent = String(days).padStart(2, "0");
+  countdownUnits.hours.textContent = String(hours).padStart(2, "0");
+  countdownUnits.minutes.textContent = String(minutes).padStart(2, "0");
+  countdownUnits.seconds.textContent = String(seconds).padStart(2, "0");
+  return true;
+}
+
+if (updateCountdown()) {
+  const countdownInterval = setInterval(() => {
+    if (!updateCountdown()) {
+      clearInterval(countdownInterval);
+    }
+  }, 1000);
+}
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#navigation");
 
