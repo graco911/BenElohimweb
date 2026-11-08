@@ -174,7 +174,7 @@ document.querySelector("#calendar-download").addEventListener("click", () => {
     "  y la eternidad. Conferencista: Pbro. Samuel Hernández Clemente.",
     " \\nViernes: 14:00 Inscripción. 19:40 Término",
     "  de Conferencias y Cena.\\nSábado: 08:30 Inicio de Actividades.",
-    "  13:50 Término de Conferencias y Comida.\\nAgenda sujeta a cambios.",
+    "  14:00 Término de Conferencias y Comida.\\nAgenda sujeta a cambios.",
     " \\nInformación e inscripción: WhatsApp 9331473040.",
     "END:VEVENT",
     "END:VCALENDAR",

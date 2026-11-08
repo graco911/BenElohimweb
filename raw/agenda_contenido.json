@@ -56,7 +56,7 @@
             "fecha": "14-NOV-26",
             "actividades": [
                 {
-                    "actividad": "Dev y canto Lema",
+                    "actividad": "Devocional y canto Lema",
                     "inicio": "08:30 a.m.",
                     "termino": "09:00 a.m."
                 },
@@ -71,38 +71,38 @@
                     "termino": "10:20 a.m."
                 },
                 {
-                    "actividad": "5ta Conferencia",
+                    "actividad": "Receso",
                     "inicio": "10:20 a.m.",
-                    "termino": "11:10 a.m."
+                    "termino": "10:50 a.m."
+                },
+                {
+                    "actividad": "5ta Conferencia",
+                    "inicio": "10:50 a.m.",
+                    "termino": "11:40 a.m."
                 },
                 {
                     "actividad": "Sesión de Preguntas",
-                    "inicio": "11:10 a.m.",
-                    "termino": "11:30 a.m."
-                },
-                {
-                    "actividad": "Receso",
-                    "inicio": "11:30 a.m.",
-                    "termino": "11:50 a.m."
+                    "inicio": "11:40 a.m.",
+                    "termino": "12:00 p.m."
                 },
                 {
                     "actividad": "6ta Conferencia",
-                    "inicio": "11:50 a.m.",
-                    "termino": "12:40 p.m."
+                    "inicio": "12:00 p.m.",
+                    "termino": "12:50 p.m."
                 },
                 {
                     "actividad": "Sesión de Preguntas",
-                    "inicio": "12:40 p.m.",
-                    "termino": "01:00 p.m."
+                    "inicio": "12:50 p.m.",
+                    "termino": "01:10 p.m."
                 },
                 {
                     "actividad": "7ma Conferencia",
-                    "inicio": "01:00 p.m.",
-                    "termino": "01:50 p.m."
+                    "inicio": "01:10 p.m.",
+                    "termino": "02:00 p.m."
                 },
                 {
                     "actividad": "Comida",
-                    "inicio": "01:50 p.m.",
+                    "inicio": "02:00 p.m.",
                     "termino": null
                 }
             ]
