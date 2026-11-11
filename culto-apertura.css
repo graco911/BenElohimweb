@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.opening-hero .program-hero-grid { grid-template-columns: 1fr; padding-block: 54px; }
+.opening-hero h1 { font-size: clamp(52px, 7vw, 82px); }
+.opening-container { max-width: 860px; }
+.opening-container .program-section-heading { padding-block: 38px 28px; }
+.opening-program { max-width: 760px; margin-inline: auto; }
+.opening-program .program-day-header { min-height: 132px; }
+.opening-program .program-timeline > li { min-height: 86px; }
+.opening-program .program-hours { display: flex; align-items: flex-start; justify-content: center; padding-top: 28px; }
+.opening-order { color: #78530e; font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; }
+.opening-program .program-activity { padding-block: 22px; }
+.opening-detail { margin: 6px 0 0; color: #5e6b76; font-size: .78rem; line-height: 1.6; }
+.opening-hymn-trigger { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; text-decoration: underline; text-decoration-color: #b98c21; text-underline-offset: 3px; cursor: pointer; }
+.opening-hymn-trigger:hover { color: #78530e; }
+.opening-hymn-trigger:focus-visible { outline-color: #9b6400; }
+.opening-hymn-dialog { width: min(620px, calc(100% - 32px)); max-height: min(760px, calc(100dvh - 32px)); padding: 28px; border: 1px solid #b98c21; border-radius: 16px; background: #fff; color: #142534; box-shadow: 0 20px 60px #14253440; }
+.opening-hymn-dialog::backdrop { background: #142534cc; }
+.opening-hymn-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid #14253426; }
+.opening-hymn-header .program-eyebrow { margin-bottom: 6px; color: #78530e; }
+.opening-hymn-header h2 { margin: 0; font-size: 2rem; }
+.opening-hymn-close { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 12px; border: 1px solid #14253440; border-radius: 8px; background: #fff; color: #142534; font-size: .8rem; }
+.opening-hymn-close:hover { background: #f5f3ed; }
+.opening-hymn-close span { font-size: 1.2rem; line-height: 1; }
+.opening-hymn-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 16px; }
+.opening-hymn-controls-label, .opening-hymn-size-status { color: #5e6b76; font-size: .75rem; }
+.opening-hymn-controls-buttons { display: flex; gap: 6px; }
+.opening-hymn-size-button { min-width: 42px; min-height: 40px; padding: 8px 10px; border: 1px solid #14253440; border-radius: 7px; background: #fff; color: #142534; font-size: .8rem; font-weight: 700; }
+.opening-hymn-size-button:hover:not(:disabled) { background: #f5f3ed; border-color: #b98c21; }
+.opening-hymn-size-button:disabled { cursor: not-allowed; opacity: .5; }
+.opening-hymn-size-status { margin-left: auto; }
+.opening-hymn-lyrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; max-height: min(55dvh, 460px); padding-top: 22px; overflow-y: auto; }
+.opening-hymn-lyrics section { min-width: 0; }
+.opening-hymn-lyrics h3 { margin-bottom: 8px; color: #78530e; font-size: .85rem; }
+.opening-hymn-lyrics p { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: var(--opening-hymn-font-size, 1rem); line-height: 1.8; }
+.opening-hymn-lyrics.opening-bible-reading { grid-template-columns: 1fr; gap: 18px; }
+.opening-hymn-credits { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid #14253426; color: #5e6b76; font-size: .75rem; line-height: 1.6; }
+.opening-bible-source { width: fit-content; color: #78530e; font-size: .8rem; line-height: 1.6; text-decoration: underline; text-underline-offset: 3px; }
+.opening-bible-source:hover { color: #142534; }
+.opening-footer { max-width: 760px; margin-inline: auto; padding-top: 24px; }
+
+@media (max-width: 680px) {
+  .opening-hero .program-hero-grid { padding-block: 38px; }
+  .opening-container .program-section-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .opening-program .program-timeline > li { grid-template-columns: 44px minmax(0, 1fr); }
+  .opening-program .program-hours { padding-top: 25px; }
+  .opening-program .program-activity { padding-left: 18px; }
+  .opening-hymn-dialog { padding: 20px; }
+  .opening-hymn-header h2 { font-size: 1.6rem; }
+  .opening-hymn-controls { gap: 8px; }
+  .opening-hymn-size-status { width: 100%; margin-left: 0; }
+  .opening-hymn-lyrics { grid-template-columns: 1fr; gap: 18px; }
+}
