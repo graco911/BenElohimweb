@@ -40,6 +40,14 @@
 .links-share:hover { background: #ffffff26; }
 .links-share-status { margin: 0; font-size: .8rem; color: #efd06a; line-height: 1.6; overflow-wrap: anywhere; }
 .links-share-status:not(:empty) { margin-top: 16px; }
+.links-sponsor { display: grid; justify-items: center; gap: 12px; margin-top: 28px; padding: 20px; border: 1px solid #ffffff40; border-radius: 18px; background: #142534; text-align: center; }
+.links-sponsor-label { margin: 0; color: #efd06a; font-size: .75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.links-sponsor-logo { display: block; width: min(100%, 220px); overflow: hidden; border-radius: 12px; background: #fff; }
+.links-sponsor-logo img { display: block; width: 100%; height: auto; }
+.links-sponsor-location, .links-sponsor-phone { color: #fff; font-size: .85rem; text-decoration: underline; text-underline-offset: 4px; }
+.links-sponsor-phone { display: inline-flex; align-items: center; gap: 8px; }
+.links-sponsor-phone svg { width: 18px; height: 18px; }
+.links-sponsor-location:hover, .links-sponsor-phone:hover { color: #efd06a; }
 .links-footer { margin-top: 32px; text-align: center; color: #b6c4d2; font-size: .75rem; line-height: 1.8; }
 .links-footer p { margin-bottom: 8px; }
 .links-footer a { display: inline-block; padding: 8px; text-decoration: underline; text-underline-offset: 4px; }
